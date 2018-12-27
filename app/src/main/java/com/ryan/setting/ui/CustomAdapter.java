@@ -1,7 +1,6 @@
-package com.ryan.setting.view;
+package com.ryan.setting.ui;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,17 +17,13 @@ import com.ryan.setting.utils.Constants;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SettingAdapter extends BaseAdapter {
+public class CustomAdapter extends BaseAdapter {
 
-    private List<ListItem> mDatas = new ArrayList<ListItem>();
+    private List<ItemData> mDatas = new ArrayList<ItemData>();
     private Context mContext;
     private int mSelectedPos = 0;
 
-    public SettingAdapter(Context context) {
-        mContext = context;
-    }
-
-    public SettingAdapter(Context context, List<ListItem> datas) {
+    public CustomAdapter(Context context, List<ItemData> datas) {
         mContext = context;
         clear();
         if (datas != null) {
@@ -42,7 +37,7 @@ public class SettingAdapter extends BaseAdapter {
     }
 
     @Override
-    public ListItem getItem(int position) {
+    public ItemData getItem(int position) {
         int size = mDatas.size();
         if (position >= 0 && position < size) {
             return mDatas.get(position);
@@ -59,11 +54,11 @@ public class SettingAdapter extends BaseAdapter {
         mDatas.clear();
     }
 
-    public void add(ListItem data) {
+    public void add(ItemData data) {
         mDatas.add(data);
     }
 
-    public void addAll(List<ListItem> datas) {
+    public void addAll(List<ItemData> datas) {
         if (datas != null) {
             mDatas.addAll(datas);
         }
@@ -75,7 +70,7 @@ public class SettingAdapter extends BaseAdapter {
         if (convertView == null) {
             holder = new ViewHolder();
             convertView = ((MainActivity)mContext).getLayoutInflater().inflate(R.layout.activity_main_row, null);
-            AbsListView.LayoutParams param = new AbsListView.LayoutParams(Constants.ITEM_WIDTH, Constants.ITEM_HEIGHT);
+            AbsListView.LayoutParams param = new AbsListView.LayoutParams(Constants.SETTING_ITEM_WIDTH, Constants.SETTING_ITEM_HEIGHT);
             convertView.setLayoutParams(param);
 
             holder.mRelativeLayout = convertView.findViewById(R.id.ll_activity_main_row);
@@ -88,7 +83,7 @@ public class SettingAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        ListItem item = mDatas.get(position);
+        ItemData item = mDatas.get(position);
         //
 
         holder.mTextViewTitle.setText(item.getTitle());
@@ -98,7 +93,7 @@ public class SettingAdapter extends BaseAdapter {
         int disableTextColor = mContext.getResources().getColor(R.color.disable_text, null);
         if (mSelectedPos == position) {
             holder.mImageViewLogo.setImageResource(item.getIcon(true));
-            holder.mRelativeLayout.setPadding(Constants.INT_ACTIVITY_MAIN_ROW_HIGHLIGHT, 0, 0, 0);
+            holder.mRelativeLayout.setPadding(Constants.ITEM_ENABLE_PADDING_LEFT, 0, 0, 0);
             holder.mTextViewTitle.setTextColor(enableTextColor);
             holder.mTextViewTitle.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
             holder.mTextViewContent.setTextColor(enableTextColor);
@@ -106,7 +101,7 @@ public class SettingAdapter extends BaseAdapter {
         }
         else {
             holder.mImageViewLogo.setImageResource(item.getIcon(false));
-            holder.mRelativeLayout.setPadding(Constants.INT_ACTIVITY_MAIN_ROW_DE_HIGHLIGHT, 0, 0, 0);
+            holder.mRelativeLayout.setPadding(Constants.ITEM_DISABLE_PADDING_LEFT, 0, 0, 0);
             holder.mTextViewTitle.setTextColor(disableTextColor);
             holder.mTextViewTitle.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
             holder.mTextViewContent.setTextColor(disableTextColor);
@@ -117,7 +112,7 @@ public class SettingAdapter extends BaseAdapter {
     }
 
     public void setSelected(int position) {
-        mSelectedPos = position - Constants.SHOW_HEADER_ITEMS;
+        mSelectedPos = position - Constants.SETTING_HEAD_COUNT;
     }
 
     public int getSelected() {

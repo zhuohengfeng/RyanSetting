@@ -1,13 +1,13 @@
-package com.ryan.setting.view;
+package com.ryan.setting.ui;
 
-public class ListItem {
+public class ItemData {
     private String title;
     private String content;
     private int enableIcon;
     private int disableIcon;
 
 
-    public ListItem(int enableIcon, int disableIcon, String title, String content) {
+    public ItemData(int enableIcon, int disableIcon, String title, String content) {
         this.title = title;
         this.content = content;
         this.enableIcon = enableIcon;

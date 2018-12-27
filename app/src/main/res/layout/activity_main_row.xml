@@ -8,7 +8,7 @@
     <RelativeLayout
         android:layout_centerVertical="true"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/setting_item_frame_height"
+        android:layout_height="@dimen/setting_item_border_height"
         android:id="@+id/ll_activity_main_row"
         >
 

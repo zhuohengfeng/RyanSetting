@@ -18,9 +18,14 @@ public class MainApplication extends Application {
     private void initApp() {
         mInstance = this;
 
-        Constants.ITEM_WIDTH = getResources()
+        Constants.ITEM_ENABLE_PADDING_LEFT = getResources()
+                .getDimensionPixelSize(R.dimen.setting_item_enable_padding);
+        Constants.ITEM_DISABLE_PADDING_LEFT = getResources()
+                .getDimensionPixelSize(R.dimen.setting_item_disable_padding);
+
+        Constants.SETTING_ITEM_WIDTH = getResources()
                 .getDimensionPixelSize(R.dimen.setting_item_width);
-        Constants.ITEM_HEIGHT = getResources()
+        Constants.SETTING_ITEM_HEIGHT = getResources()
                 .getDimensionPixelSize(R.dimen.setting_item_height);
     }
 
