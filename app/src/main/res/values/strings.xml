@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">RyanSetting</string>
+
+    <string name="delete_dialog_button_text_yes">Delete</string>
+    <string name="delete_dialog_button_text_no">Cancel</string>
+
+    <string name="activity_main_title_wifi">Wi-Fi</string>
+    <string name="activity_main_title_bluetooth">蓝牙</string>
+    <string name="activity_main_title_brightness">亮度</string>
+    <string name="activity_main_title_wakeup">\"若琪\"唤醒词</string>
+    <string name="activity_main_title_ota">系统升级</string>
+    <string name="activity_main_title_language">语言</string>
+    <string name="activity_main_title_info">本机信息</string>
+    <string name="activity_wifi_title_switch">Wi-Fi</string>
+    <string name="activity_wifi_title_new_network">连接新网络</string>
+    <string name="activity_wifi_dialog_before_scan_title">请在手机上下载Rokid Glass APP并根据提示生成二维码</string>
+    <string name="activity_wifi_dialog_before_scan_button_positive">扫描</string>
+    <string name="activity_wifi_dialog_before_scan_button_negative">取消</string>
+    <string name="activity_wifi_dialog_after_scan_title_success_1"></string>
+    <string name="activity_wifi_dialog_after_scan_title_success_2">连接成功</string>
+    <string name="activity_wifi_dialog_after_scan_title_failed_1"></string>
+    <string name="activity_wifi_dialog_after_scan_title_failed_2">连接失败</string>
+    <string name="activity_wifi_dialog_after_scan_button_positive">确认</string>
+    <string name="activity_bluetooth_title_switch">蓝牙</string>
+    <string name="activity_bluetooth_connectible">本机蓝牙名称</string>
+    <string name="activity_bluetooth_discoverable">现在可被发现为</string>
+    <string name="activity_info_self_info">本机名称</string>
+    <string name="activity_info_mac_address">MAC地址</string>
+    <string name="activity_info_sys_version">系统版本</string>
+    <string name="activity_info_serial_number">序列号</string>
+    <string name="activity_info_title">本机信息</string>
+
+    <string name="activity_wakeup_on">已开启</string>
+    <string name="activity_wakeup_off">已关闭</string>
+</resources>

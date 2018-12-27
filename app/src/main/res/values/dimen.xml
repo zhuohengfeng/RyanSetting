@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="setting_item_width">450dp</dimen>
+    <dimen name="setting_item_frame_height">65dp</dimen>
+    <dimen name="setting_item_height">85dp</dimen>
+
+    <dimen name="setting_item_margin_left">70dp</dimen>
+    <dimen name="setting_item_margin_righ">70dp</dimen>
+
+</resources>
